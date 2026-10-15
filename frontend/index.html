@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My Todos</h1>
+        <p class="subtitle">Stay organised, one task at a time.</p>
+      </header>
+
+      <!-- Add todo form -->
+      <form id="todo-form" autocomplete="off">
+        <div class="input-group">
+          <input
+            type="text"
+            id="title-input"
+            placeholder="What needs to be done?"
+            maxlength="200"
+            required
+          />
+          <input
+            type="text"
+            id="description-input"
+            placeholder="Description (optional)"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Add Todo</button>
+      </form>
+
+      <!-- Filters -->
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+
+      <!-- Todo list -->
+      <ul id="todo-list" aria-label="Todo list"></ul>
+
+      <!-- Empty state -->
+      <p id="empty-state" class="empty-state hidden">No todos here yet!</p>
+
+      <!-- Footer count -->
+      <footer id="todo-footer" class="hidden">
+        <span id="todo-count"></span>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
